@@ -46,6 +46,13 @@ public class ComercioController {
     @PostMapping
     public ResponseEntity<ComercioDTOResponse> incluirComercio(@Valid @RequestBody ComercioDTO comercioDto) {
         // TODO: Responde POST em http://localhost:8080/placeti/comercios
+        //	 Envia JSON no body:
+        //	 {
+        //    "nomeComercio": "Pão Dourado",
+        //    "nomeResponsavel": "Douglas",
+        //    "tipoComercio": "PADARIA",
+        //    "idCidade": 1
+        //   }
         return projetoService.incluirComercio(comercioDto);
     }
 
@@ -55,6 +62,13 @@ public class ComercioController {
     @PutMapping
     public ResponseEntity<ComercioDTOResponse> alterarComercio(@Valid @RequestBody ComercioDTO comercioDto) {
         // TODO: Responde PUT em http://localhost:8080/placeti/comercios
+        //	 Envia JSON no body:
+        //	 {
+        //    "nomeComercio": "Drogasil",
+        //    "nomeResponsavel": "Fernanda",
+        //    "tipoComercio": "FARMACIA",
+        //    "idCidade": 3
+        //   }
         return projetoService.alterarComercio(comercioDto);
     }
 
